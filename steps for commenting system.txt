@@ -1,0 +1,38 @@
+Steps are:-
+
+# Fire up MongoDB container
+docker run -d -p 27017:27017 --restart unless-stopped --name commentsmongo mongo
+
+###This is for backend
+# Fire up Redis container
+docker run -d -p 6379:6379 --restart unless-stopped --name commentsredis redis
+
+# Go into the backend directory
+cd comment-system-master/backend
+
+# Install dependencies
+npm install
+
+# Start the server
+npm start
+
+
+###This is for frontend
+# Go into main app directory
+cd src
+
+# Install dependencies
+npm install
+
+# Start the App
+npm start
+
+
+
+
+set FLASK_APP=app.py
+
+
+
+dcc.Link(html.Button('click to add comment'), href="http://localhost:3000/"),
+                        dcc.Link(html.Button('click to add comment'), href="http://127.0.0.1:5000/"),
